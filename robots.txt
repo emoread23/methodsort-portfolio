@@ -1,0 +1,3 @@
+User-agent: *
+Allow: /
+Sitemap: https://emoread23.github.io/methodsort-portfolio/sitemap.xml
