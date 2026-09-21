@@ -71,6 +71,7 @@ h1 em, h2 em { color: var(--accent); font-style: normal; }
 .hero-lead { max-width: 600px; color: var(--muted); font-size: 19px; line-height: 1.6; margin-bottom: 38px; }
 .hero-actions { display: flex; align-items: center; gap: 26px; flex-wrap: wrap; }
 .button { display: inline-flex; align-items: center; gap: 20px; min-height: 49px; padding: 0 19px; font-size: 14px; font-weight: 600; transition: transform .2s var(--ease), background .2s, color .2s; }
+.button-arrow { display: block; width: 18px; height: 18px; flex: 0 0 18px; stroke: currentColor; stroke-width: 1.8; stroke-linecap: square; stroke-linejoin: miter; fill: none; }
 .button:hover { transform: translateY(-2px); }
 .button-primary { background: var(--accent); color: var(--accent-ink); }
 .button-primary:hover { background: color-mix(in srgb, var(--accent), white 13%); }

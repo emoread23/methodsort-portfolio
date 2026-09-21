@@ -139,7 +139,7 @@ document.querySelectorAll('[data-case]').forEach((trigger) => {
     dialogLink.href = data.link || '#contact';
     dialogLink.target = data.link ? '_blank' : '';
     dialogLink.rel = data.link ? 'noreferrer' : '';
-    dialogLink.innerHTML = data.link ? 'Открыть сайт <span aria-hidden="true">↗</span>' : 'Обсудить похожую задачу <span aria-hidden="true">↗</span>';
+    dialogLink.innerHTML = data.link ? 'Открыть сайт <svg class="button-arrow" viewBox="0 0 18 18" aria-hidden="true" focusable="false"><path d="M4 14 14 4M6 4h8v8" /></svg>' : 'Обсудить похожую задачу <svg class="button-arrow" viewBox="0 0 18 18" aria-hidden="true" focusable="false"><path d="M4 14 14 4M6 4h8v8" /></svg>';
     dialog.showModal();
   });
 });
