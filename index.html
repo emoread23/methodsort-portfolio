@@ -1,171 +1,240 @@
 <!doctype html>
 <html lang="ru">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <meta name="theme-color" content="#0d1117" />
-    <title>methodsort — цифровые инструменты для бизнеса</title>
-    <meta name="description" content="methodsort создаёт сайты, Telegram-продукты и автоматизацию, которые помогают бизнесу принимать заявки и экономить время." />
-    <meta property="og:type" content="website" />
-    <meta property="og:title" content="methodsort — цифровые инструменты для бизнеса" />
-    <meta property="og:description" content="Сайты, Telegram-продукты и автоматизация от идеи до запуска." />
-    <meta property="og:image" content="og-image.svg" />
-    <meta property="og:url" content="https://emoread23.github.io/methodsort-portfolio/" />
-    <link rel="icon" href="favicon.svg" type="image/svg+xml" />
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link rel="preload" as="style" href="https://fonts.googleapis.com/css2?family=DM+Mono:wght@400;500&family=Space+Grotesk:wght@400;500;600;700&display=swap" />
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=DM+Mono:wght@400;500&family=Space+Grotesk:wght@400;500;600;700&display=swap" />
-    <link rel="stylesheet" href="styles.css" />
-  </head>
-  <body>
-    <a class="skip-link" href="#main">К содержанию</a>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>methodsort — сайты, Telegram и автоматизация</title>
+<meta name="description" content="Независимый разработчик methodsort: сайты, Telegram-боты, Mini Apps и автоматизация для бизнеса. Полный цикл от идеи до запуска на сервере.">
+<meta name="theme-color" content="#05060a">
+<meta property="og:type" content="website">
+<meta property="og:title" content="methodsort — цифровые инструменты для бизнеса">
+<meta property="og:description" content="Сайты, Telegram-продукты и автоматизация от идеи до запуска.">
+<meta property="og:image" content="og-image.svg">
+<meta property="og:url" content="https://emoread23.github.io/methodsort-portfolio/">
+<link rel="icon" href="favicon.svg" type="image/svg+xml">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Unbounded:wght@400;600;800&family=Manrope:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://unpkg.com/lenis@1.1.13/dist/lenis.css">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
 
-    <header class="site-header">
-      <div class="container nav-wrap">
-        <a class="brand" href="#top" aria-label="methodsort — на главную">
-          <span class="brand-mark" aria-hidden="true"><b>m</b><i>s</i></span>
-          <span>methodsort</span>
-        </a>
-        <nav class="main-nav" aria-label="Основная навигация">
-          <a href="#work">Работы</a>
-          <a href="#approach">Подход</a>
-          <a href="#contact">Контакт</a>
-        </nav>
-        <div class="nav-actions">
-          <button class="theme-toggle" type="button" aria-label="Переключить тему" title="Переключить тему">
-            <span aria-hidden="true">◐</span>
-          </button>
-        </div>
-      </div>
-    </header>
+<canvas id="bg" aria-hidden="true"></canvas>
+<div class="grain" aria-hidden="true"></div>
+<div class="cursor-glow" aria-hidden="true"></div>
 
-    <main id="main">
-      <section class="hero section" id="top">
-        <div class="container hero-grid">
-          <div class="hero-copy reveal">
-            <p class="eyebrow"><span class="eyebrow-line"></span> независимый разработчик · methodsort</p>
-            <h1>Цифровые инструменты, которые <em>двигают</em> бизнес.</h1>
-            <p class="hero-lead">Делаю сайты, Telegram-продукты и автоматизацию для предпринимателей, которым нужно меньше ручной работы и больше понятных действий от клиента.</p>
-            <div class="hero-actions">
-              <a class="button button-primary" href="#contact">Обсудить задачу <svg class="button-arrow" viewBox="0 0 18 18" aria-hidden="true" focusable="false"><path d="M4 14 14 4M6 4h8v8" /></svg></a>
-              <a class="text-link" href="#work">Посмотреть работы <span aria-hidden="true">↓</span></a>
-            </div>
-            <div class="hero-meta" aria-label="Факты о работе">
-              <span>ПОЛНЫЙ ЦИКЛ</span><span>РАБОТАЮ НАПРЯМУЮ</span><span>ЗАПУСК НА СЕРВЕРЕ</span>
-            </div>
+<header class="nav">
+  <a href="#top" class="logo"><span class="logo-dot"></span>methodsort</a>
+  <nav>
+    <a href="#work">Работы</a>
+    <a href="#approach">Подход</a>
+    <a href="#contact">Контакт</a>
+  </nav>
+  <a href="https://t.me/methodsort" target="_blank" rel="noopener" class="btn btn-light btn-sm">Написать</a>
+</header>
+
+<main id="top">
+
+  <!-- HERO -->
+  <section class="hero">
+    <p class="eyebrow reveal">независимый разработчик · methodsort</p>
+    <h1 class="hero-title" aria-label="Цифровые инструменты, которые двигают бизнес">
+      <span class="line"><span>цифровые инструменты,</span></span>
+      <span class="line"><span>которые <span class="accent">двигают</span> бизнес</span></span>
+    </h1>
+    <p class="hero-sub reveal">Делаю сайты, Telegram-продукты и автоматизацию для владельцев бизнеса, которым нужно меньше ручной работы и больше понятных действий от клиентов.</p>
+    <div class="hero-cta reveal">
+      <a href="#work" class="btn btn-light">Смотреть работы</a>
+      <a href="https://t.me/methodsort" target="_blank" rel="noopener" class="btn btn-glass">Обсудить задачу</a>
+    </div>
+    <ul class="badges reveal">
+      <li>Полный цикл</li><li>Работаю напрямую</li><li>Запуск на сервере</li>
+    </ul>
+    <div class="scroll-hint"><span></span>scroll</div>
+  </section>
+
+  <!-- FOCUS LOG -->
+  <section class="focus">
+    <div class="terminal glass reveal">
+      <div class="term-head"><i></i><i></i><i></i><span>focus.log</span></div>
+      <pre class="term-body" id="term"></pre>
+    </div>
+    <div class="principles">
+      <div class="principle glass reveal"><span class="mono">01 / цель</span><p>Понять, какое действие клиента должно стать проще.</p></div>
+      <div class="principle glass reveal"><span class="mono">02 / решение</span><p>Ровно та сложность, которая нужна задаче и бюджету.</p></div>
+      <div class="principle glass reveal"><span class="mono">03 / запуск</span><p>Рабочий продукт на сервере, а не макет в архиве.</p></div>
+    </div>
+  </section>
+
+  <!-- MARQUEE -->
+  <div class="marquee" aria-hidden="true">
+    <div class="marquee-track">
+      <span>сайты</span><b>✦</b><span>telegram-боты</span><b>✦</b><span>mini apps</span><b>✦</b><span>автоматизация</span><b>✦</b><span>парсинг</span><b>✦</b>
+      <span>сайты</span><b>✦</b><span>telegram-боты</span><b>✦</b><span>mini apps</span><b>✦</b><span>автоматизация</span><b>✦</b><span>парсинг</span><b>✦</b>
+    </div>
+  </div>
+
+  <!-- WORK -->
+  <section class="work" id="work">
+    <div class="section-head">
+      <p class="eyebrow reveal">selected work</p>
+      <h2 class="big-title reveal">работы</h2>
+    </div>
+
+    <div class="cards">
+
+      <article class="card glass card-wide" data-case="palladium">
+        <div class="card-media mock-site">
+          <div class="ms-bar"><i></i><i></i><i></i><span>palladiumlegal.co.uk</span></div>
+          <div class="ms-body">
+            <span class="ms-kicker">BUSINESS WITH CLARITY</span>
+            <strong>Legal advice<br>for what's next.</strong>
+            <span class="ms-meta">Commercial law / London</span>
+            <div class="ms-btns"><em></em><em class="o"></em></div>
           </div>
-          <div class="hero-terminal reveal reveal-delay" aria-label="Рабочая консоль разработчика">
-            <div class="terminal-bar"><span></span><span></span><span></span><code>methodsort / focus.log</code></div>
-            <div class="terminal-body">
-              <p class="terminal-comment">// что должно измениться после запуска</p>
-              <p><b class="terminal-key">01</b> клиент оставляет заявку <span class="terminal-arrow">→</span></p>
-              <p><b class="terminal-key">02</b> бизнес видит следующий шаг <span class="terminal-arrow">→</span></p>
-              <p><b class="terminal-key">03</b> ручная рутина исчезает</p>
-              <div class="terminal-rule"></div>
-              <p class="terminal-result"><span class="status-dot"></span> результат важнее стека<span class="cursor">_</span></p>
-            </div>
-          </div>
+          <div class="ms-orb"></div>
         </div>
-      </section>
-
-      <section class="signal-strip" aria-label="Принципы работы">
-        <div class="container signal-inner">
-          <span>01 / цель</span><strong>Сначала разбираюсь в задаче</strong>
-          <span>02 / решение</span><strong>Собираю ровно нужный инструмент</strong>
-          <span>03 / запуск</span><strong>Оставляю рабочую систему, а не архив</strong>
+        <div class="card-info">
+          <div class="card-tags"><span class="tag tag-real">реальный клиент</span><span class="mono">01</span></div>
+          <h3>Palladium Legal</h3>
+          <p>Сайт юридической фирмы, который объясняет сложное простым языком. Концепция, адаптивная вёрстка, формы, SEO и сервер.</p>
+          <div class="card-foot"><span class="mono">4–5 дней · дизайн → разработка → SEO → запуск</span><button class="round" aria-label="Открыть разбор">↗</button></div>
         </div>
-      </section>
+      </article>
 
-      <section class="section work-section" id="work">
-        <div class="container">
-          <div class="section-heading reveal">
-            <p class="eyebrow"><span class="eyebrow-line"></span> selected work</p>
-            <h2>Работы с контекстом,<br /><em>а не просто скриншотом.</em></h2>
-            <p>Коммерческие проекты и демонстрационные сценарии. Статус каждого проекта указан прямо — без придуманных клиентов и цифр.</p>
-          </div>
+      <article class="card glass" data-case="fastspam">
+        <div class="card-media mock-shots">
+          <img src="assets/fastspam-menu.webp" alt="Меню FastSpamBot" loading="lazy">
+          <img src="assets/fastspam-profile.webp" alt="Профиль FastSpamBot" loading="lazy">
+          <img src="assets/fastspam-faq.webp" alt="FAQ FastSpamBot" loading="lazy">
+        </div>
+        <div class="card-info">
+          <div class="card-tags"><span class="tag tag-real">реальный клиент</span><span class="mono">02</span></div>
+          <h3>FastSpamBot</h3>
+          <p>Telegram-бот для массовой рассылки: подписки, парсер и инвайтинг в одном меню.</p>
+          <div class="card-foot"><span class="mono">telegram-бот</span><button class="round" aria-label="Открыть разбор">↗</button></div>
+        </div>
+      </article>
 
-          <article class="case-feature reveal">
-            <div class="case-visual palladium-visual" aria-label="Превью сайта Palladium Legal">
-              <div class="browser-chrome"><span></span><span></span><span></span><small>palladiumlegal.co.uk</small></div>
-              <div class="legal-site">
-                <div class="legal-nav"><b>PALLADIUM<br /><i>LEGAL</i></b><span>Expertise</span><span>Our people</span><span>Contact</span><button>EN <small>⌄</small></button></div>
-                <div class="legal-hero"><p>BUSINESS<br />WITH CLARITY</p><h3>Legal advice<br /><i>for what’s next.</i></h3><span class="legal-round">↗</span></div>
-                <div class="legal-footer"><span>Commercial law / London</span><span>Scroll to explore ↓</span></div>
-              </div>
-            </div>
-            <div class="case-feature-copy">
-              <div class="case-kicker"><span class="case-index">01</span><span class="case-type type-client">реальный клиент</span></div>
-              <h3>Palladium Legal: сайт, который объясняет сложное простым языком</h3>
-              <p>Сайт юридической компании с нуля: от визуальной концепции и адаптива до форм, SEO и установки на сервер. Задача — дать потенциальному клиенту понятный следующий шаг ещё до первого звонка.</p>
-              <div class="case-details"><div><span>срок</span><strong>4–5 дней</strong></div><div><span>сделано</span><strong>дизайн → разработка → SEO → запуск</strong></div><div><span>ссылка</span><strong><a href="https://palladiumlegal.co.uk/" target="_blank" rel="noreferrer">живой сайт ↗</a></strong></div></div>
-              <button class="case-link" type="button" data-case="palladium">Разобрать решение <svg class="button-arrow" viewBox="0 0 18 18" aria-hidden="true" focusable="false"><path d="M4 14 14 4M6 4h8v8" /></svg></button>
-            </div>
-          </article>
-
-          <article class="case-feature case-feature-bot reveal">
-            <div class="fastspam-visual" aria-label="Скриншоты Telegram-бота FastSpamBot">
-              <div class="fastspam-shot fastspam-shot-main"><img src="assets/fastspam-profile.webp" alt="Профиль пользователя в Telegram-боте FastSpamBot" loading="lazy" decoding="async" /></div>
-              <div class="fastspam-shot fastspam-shot-menu"><img src="assets/fastspam-menu.webp" alt="Главное меню Telegram-бота FastSpamBot" loading="lazy" decoding="async" /></div>
-              <div class="fastspam-shot fastspam-shot-faq"><img src="assets/fastspam-faq.webp" alt="Раздел FAQ и поддержки Telegram-бота FastSpamBot" loading="lazy" decoding="async" /></div>
-            </div>
-            <div class="case-feature-copy">
-              <div class="case-kicker"><span class="case-index">02</span><span class="case-type type-client">реальный клиент</span></div>
-              <h3>FastSpamBot: массовая рассылка в Telegram с гибкими сценариями</h3>
-              <p>Telegram-бот для управления рассылками, подпиской, парсером и инвайтингом из одного меню. Пользователь видит профиль, баланс и доступные инструменты в привычном интерфейсе Telegram.</p>
-              <div class="case-details"><div><span>формат</span><strong>Telegram-бот</strong></div><div><span>сценарий</span><strong>массовая рассылка</strong></div><div><span>ссылка</span><strong><a href="https://t.me/FastSpammBot" target="_blank" rel="noreferrer">открыть бота ↗</a></strong></div></div>
-              <button class="case-link" type="button" data-case="fastspam">Разобрать решение <svg class="button-arrow" viewBox="0 0 18 18" aria-hidden="true" focusable="false"><path d="M4 14 14 4M6 4h8v8" /></svg></button>
-            </div>
-          </article>
-
-          <div class="case-list">
-            <article class="case-row reveal">
-              <div class="case-row-visual telegram-visual" aria-label="Превью Telegram Mini App для заказов">
-                <div class="phone-shell"><div class="phone-top"><span>9:41</span><span>●●●</span></div><div class="tg-app"><div class="tg-head"><b>menu / studio</b><span>⌕</span></div><p class="tg-greeting">Сегодня хочется<br /><strong>чего-то хорошего.</strong></p><div class="tg-order"><span class="food-dot"></span><div><b>Сет «Вечерний»</b><small>4 позиции · 1 240 ₽</small></div><button>+</button></div><div class="tg-order faded"><span class="food-dot blue"></span><div><b>Завтрак для двоих</b><small>3 позиции · 890 ₽</small></div><button>+</button></div><div class="tg-cart">Перейти к заказу <b>2 130 ₽ ↗</b></div></div></div>
-              </div>
-              <div class="case-row-copy"><div class="case-kicker"><span class="case-index">03</span><span class="case-type type-demo">демо-проект</span></div><h3>Заказ в Telegram: путь от меню до оплаты без отдельного приложения</h3><p>Демонстрационный Mini App для небольшого food-проекта. Показывает сценарий, где клиент выбирает товары, оставляет контакты и получает понятный статус заказа в знакомом интерфейсе.</p><div class="tag-line"><span>Telegram Mini App</span><span>TypeScript</span><span>Node.js</span></div><button class="case-link" type="button" data-case="telegram">Открыть разбор <svg class="button-arrow" viewBox="0 0 18 18" aria-hidden="true" focusable="false"><path d="M4 14 14 4M6 4h8v8" /></svg></button></div>
-            </article>
-
-            <article class="case-row case-row-reverse reveal">
-              <div class="case-row-visual ops-visual" aria-label="Превью панели обработки заявок">
-                <div class="ops-window"><div class="ops-top"><b>flow / inbox</b><span><i></i> all systems nominal</span></div><div class="ops-content"><aside><span class="active">inbox <b>12</b></span><span>in progress</span><span>done</span><span>settings</span></aside><div class="ops-main"><div class="ops-title"><div><small>MONDAY / 14:28</small><h4>Входящие заявки</h4></div><span class="ops-filter">filter: all⌄</span></div><div class="lead-card"><span class="lead-avatar">AK</span><div><b>Алексей К.</b><small>Нужен расчёт для сайта</small></div><em>new</em></div><div class="lead-card muted"><span class="lead-avatar purple">MP</span><div><b>Мария П.</b><small>Автоматизация отчётов</small></div><em>reply</em></div><div class="lead-card muted"><span class="lead-avatar yellow">IS</span><div><b>Илья С.</b><small>Telegram-бот для записи</small></div><em>waiting</em></div></div></div></div>
-              </div>
-              <div class="case-row-copy"><div class="case-kicker"><span class="case-index">04</span><span class="case-type type-demo">демо-проект</span></div><h3>Заявки без хаоса: единый вход для сообщений из разных каналов</h3><p>Демонстрационный сценарий автоматизации для малого бизнеса. Форма, Telegram и уведомления собираются в один поток, чтобы ни одна заявка не терялась между вкладками.</p><div class="tag-line"><span>n8n</span><span>React</span><span>Webhooks</span></div><button class="case-link" type="button" data-case="flow">Открыть разбор <svg class="button-arrow" viewBox="0 0 18 18" aria-hidden="true" focusable="false"><path d="M4 14 14 4M6 4h8v8" /></svg></button></div>
-            </article>
-
-            <article class="case-row reveal">
-              <div class="case-row-visual booking-visual" aria-label="Превью интерфейса записи на услугу">
-                <div class="booking-window"><div class="booking-top"><b>atelier / booking</b><span>ru / en</span></div><div class="booking-main"><small>SELECT A SERVICE</small><h4>Запись без звонка</h4><div class="booking-service active"><span>01</span><div><b>Консультация</b><small>45 мин · online</small></div><strong>↗</strong></div><div class="booking-service"><span>02</span><div><b>Разбор проекта</b><small>60 мин · studio</small></div><strong>↗</strong></div><div class="booking-days"><span>ПН<br /><b>12</b></span><span>ВТ<br /><b>13</b></span><span class="selected">СР<br /><b>14</b></span><span>ЧТ<br /><b>15</b></span></div><div class="booking-times"><span>10:00</span><span class="selected">12:30</span><span>16:00</span></div></div></div>
-              </div>
-              <div class="case-row-copy"><div class="case-kicker"><span class="case-index">05</span><span class="case-type type-demo">демо-проект</span></div><h3>Запись на услугу: клиент выбирает слот без переписки</h3><p>Демонстрационный Mini App для специалиста с почасовыми консультациями. Интерфейс ведёт от выбора услуги к свободному времени, а не оставляет человека один на один с кнопкой «написать».</p><div class="tag-line"><span>React</span><span>Mini App</span><span>calendar API</span></div><button class="case-link" type="button" data-case="booking">Открыть разбор <svg class="button-arrow" viewBox="0 0 18 18" aria-hidden="true" focusable="false"><path d="M4 14 14 4M6 4h8v8" /></svg></button></div>
-            </article>
-
-            <article class="case-row case-row-reverse reveal">
-              <div class="case-row-visual parser-visual" aria-label="Превью панели мониторинга цен">
-                <div class="parser-window"><div class="parser-top"><b>watch / catalog</b><span><i></i> syncing</span></div><div class="parser-head"><div><small>MONITORING</small><h4>Цены и наличие</h4></div><button>+ добавить источник</button></div><div class="parser-table"><div class="parser-row parser-label"><span>источник</span><span>цена</span><span>изменение</span><span>статус</span></div><div class="parser-row"><span><i class="source-dot orange"></i>store / alpha</span><span>12 490 ₽</span><span class="down">−8.4%</span><span class="ok">updated</span></div><div class="parser-row"><span><i class="source-dot blue"></i>market / beta</span><span>13 100 ₽</span><span class="up">+2.1%</span><span class="ok">updated</span></div><div class="parser-row"><span><i class="source-dot purple"></i>shop / gamma</span><span>—</span><span>—</span><span class="wait">queued</span></div></div></div>
-              </div>
-              <div class="case-row-copy"><div class="case-kicker"><span class="case-index">06</span><span class="case-type type-demo">демо-проект</span></div><h3>Мониторинг каталога: изменения цен видны до того, как станут проблемой</h3><p>Демонстрационный интерфейс для парсинга каталога. Система собирает источники в одну таблицу, показывает динамику и оставляет оператору только решения, которые требуют внимания.</p><div class="tag-line"><span>Python</span><span>Playwright</span><span>REST API</span></div><button class="case-link" type="button" data-case="parser">Открыть разбор <svg class="button-arrow" viewBox="0 0 18 18" aria-hidden="true" focusable="false"><path d="M4 14 14 4M6 4h8v8" /></svg></button></div>
-            </article>
+      <article class="card glass" data-case="order">
+        <div class="card-media mock-phone">
+          <div class="phone">
+            <div class="ph-title">Заказ</div>
+            <div class="ph-row"><span>Сет «Вечерний»</span><b>1 240 ₽</b></div>
+            <div class="ph-row"><span>Завтрак для двоих</span><b>890 ₽</b></div>
+            <div class="ph-total"><span>Итого</span><b>2 130 ₽</b></div>
+            <div class="ph-btn">Оформить</div>
           </div>
         </div>
-      </section>
-
-      <section class="section approach-section" id="approach">
-        <div class="container approach-grid">
-          <div class="section-heading reveal"><p class="eyebrow"><span class="eyebrow-line"></span> approach</p><h2>Меньше слоёв.<br /><em>Больше ясности.</em></h2><p>Я не продаю часы разработки. Я разбираю путь клиента и собираю инструмент, который этот путь сокращает.</p></div>
-          <div class="approach-steps reveal reveal-delay"><div class="approach-step"><span>01</span><div><h3>Собираю контекст</h3><p>Кто пользователь, что ему мешает и какое действие должно стать проще.</p></div></div><div class="approach-step"><span>02</span><div><h3>Выбираю нужную сложность</h3><p>Без модных технологий ради технологий — только то, что выдержит задачу и бюджет.</p></div></div><div class="approach-step"><span>03</span><div><h3>Довожу до запуска</h3><p>Проверяю адаптив, формы, домен и сервер. Передаю работающий результат, а не папку с исходниками.</p></div></div></div>
+        <div class="card-info">
+          <div class="card-tags"><span class="tag">демо</span><span class="mono">03</span></div>
+          <h3>Заказ в Telegram</h3>
+          <p>Путь от меню до оплаты без отдельного приложения: выбор блюд, контакты, статус заказа.</p>
+          <div class="card-foot"><span class="mono">mini app · ts · node.js</span><button class="round" aria-label="Открыть разбор">↗</button></div>
         </div>
-      </section>
+      </article>
 
-      <section class="contact-section" id="contact">
-        <div class="container contact-grid reveal"><div><p class="eyebrow"><span class="eyebrow-line"></span> next step</p><h2>Есть задача,<br /><em>которую пора упростить?</em></h2></div><div class="contact-copy"><p>Напишите в Telegram или на почту. В ответ я задам несколько точных вопросов и скажу, какой формат решения здесь действительно нужен.</p><div class="contact-links"><a class="button button-primary" href="https://t.me/methodsort" target="_blank" rel="noreferrer">Написать в Telegram <svg class="button-arrow" viewBox="0 0 18 18" aria-hidden="true" focusable="false"><path d="M4 14 14 4M6 4h8v8" /></svg></a><a class="contact-mail" href="mailto:gnidaceo@internet.ru">gnidaceo@internet.ru</a></div></div></div>
-      </section>
-    </main>
+      <article class="card glass" data-case="inbox">
+        <div class="card-media mock-inbox">
+          <div class="ib-head"><span>Входящие</span><b>12</b></div>
+          <div class="ib-row"><i style="--c:#8fd3ff"></i><span>Алексей К.</span><em>форма</em></div>
+          <div class="ib-row"><i style="--c:#c3a6ff"></i><span>Мария П.</span><em>telegram</em></div>
+          <div class="ib-row"><i style="--c:#9cffd0"></i><span>Илья С.</span><em>webhook</em></div>
+        </div>
+        <div class="card-info">
+          <div class="card-tags"><span class="tag">демо</span><span class="mono">04</span></div>
+          <h3>Заявки без хаоса</h3>
+          <p>Формы, Telegram и уведомления сходятся в один поток, и ни одна заявка не теряется.</p>
+          <div class="card-foot"><span class="mono">n8n · react · webhooks</span><button class="round" aria-label="Открыть разбор">↗</button></div>
+        </div>
+      </article>
 
-    <footer class="site-footer"><div class="container footer-inner"><span>© <span id="year"></span> methodsort</span><span>sites / telegram / automation</span><a href="#top">наверх ↑</a></div></footer>
+      <article class="card glass" data-case="booking">
+        <div class="card-media mock-booking">
+          <div class="bk-svc"><b>Консультация</b><span>45 мин · онлайн</span></div>
+          <div class="bk-svc dim"><b>Разбор проекта</b><span>60 мин · студия</span></div>
+          <div class="bk-slots"><span>10:00</span><span class="on">12:30</span><span>16:00</span></div>
+        </div>
+        <div class="card-info">
+          <div class="card-tags"><span class="tag">демо</span><span class="mono">05</span></div>
+          <h3>Запись на услугу</h3>
+          <p>Клиент выбирает услугу и свободный слот без переписки с консультантом.</p>
+          <div class="card-foot"><span class="mono">react · mini app · calendar api</span><button class="round" aria-label="Открыть разбор">↗</button></div>
+        </div>
+      </article>
 
-    <dialog class="case-dialog" aria-labelledby="dialog-title"><div class="dialog-inner"><button class="dialog-close" type="button" aria-label="Закрыть разбор">×</button><p class="eyebrow"><span class="eyebrow-line"></span><span id="dialog-type">case study</span></p><h2 id="dialog-title"></h2><p class="dialog-intro" id="dialog-intro"></p><div class="dialog-columns"><div><h3>Контекст</h3><p id="dialog-context"></p></div><div><h3>Что сделано</h3><ul id="dialog-solutions"></ul></div><div><h3>Результат</h3><p id="dialog-result"></p></div><div><h3>Стек</h3><p class="dialog-stack" id="dialog-stack"></p></div></div><a class="button button-primary dialog-cta" id="dialog-link" href="#contact">Обсудить похожую задачу <svg class="button-arrow" viewBox="0 0 18 18" aria-hidden="true" focusable="false"><path d="M4 14 14 4M6 4h8v8" /></svg></a></div></dialog>
+      <article class="card glass card-wide" data-case="monitor">
+        <div class="card-media mock-table">
+          <div class="tb-row tb-h"><span>источник</span><span>цена</span><span>Δ</span></div>
+          <div class="tb-row"><span>store/alpha</span><span>12 490 ₽</span><span class="down">−8.4%</span></div>
+          <div class="tb-row"><span>market/beta</span><span>13 100 ₽</span><span class="up">+2.1%</span></div>
+          <div class="tb-row"><span>shop/gamma</span><span>—</span><span class="q">queued</span></div>
+          <svg class="spark" viewBox="0 0 200 40" preserveAspectRatio="none"><path d="M0 30 L25 26 L50 28 L75 18 L100 22 L125 12 L150 16 L175 6 L200 10"/></svg>
+        </div>
+        <div class="card-info">
+          <div class="card-tags"><span class="tag">демо</span><span class="mono">06</span></div>
+          <h3>Мониторинг каталога</h3>
+          <p>Изменения цен видны до того, как станут проблемой. Источники в одной таблице, оператору остаются только решения.</p>
+          <div class="card-foot"><span class="mono">python · playwright · rest api</span><button class="round" aria-label="Открыть разбор">↗</button></div>
+        </div>
+      </article>
 
-    <script src="script.js" defer></script>
-  </body>
+    </div>
+  </section>
+
+  <!-- APPROACH -->
+  <section class="approach" id="approach">
+    <div class="section-head">
+      <p class="eyebrow reveal">подход</p>
+      <h2 class="big-title reveal">меньше слоёв.<br><span class="accent">больше ясности.</span></h2>
+    </div>
+    <div class="steps">
+      <div class="step reveal"><span class="step-n">01</span><h3>Собираю контекст</h3><p>Кто пользователь, что ему мешает и какое действие должно стать проще.</p></div>
+      <div class="step reveal"><span class="step-n">02</span><h3>Выбираю нужную сложность</h3><p>Без модных технологий ради технологий. Только то, что подходит задаче и бюджету.</p></div>
+      <div class="step reveal"><span class="step-n">03</span><h3>Довожу до запуска</h3><p>Проверяю адаптив, формы, домен и сервер. Передаю работающий результат.</p></div>
+    </div>
+  </section>
+
+  <!-- CONTACT -->
+  <section class="contact" id="contact">
+    <h2 class="huge reveal">есть задача?</h2>
+    <p class="hero-sub reveal">Расскажите, что сейчас отнимает время. Отвечу, как это упростить и сколько займёт.</p>
+    <div class="hero-cta reveal">
+      <a href="https://t.me/methodsort" target="_blank" rel="noopener" class="btn btn-light">Telegram · @methodsort</a>
+      <a href="mailto:gnidaceo@internet.ru" class="btn btn-glass">gnidaceo@internet.ru</a>
+    </div>
+  </section>
+</main>
+
+<footer class="footer">
+  <span>© methodsort</span>
+  <span class="mono">sites / telegram / automation</span>
+  <a href="#top">наверх ↑</a>
+</footer>
+
+<!-- CASE MODAL -->
+<div class="modal" id="modal" aria-hidden="true">
+  <div class="modal-backdrop" data-close></div>
+  <div class="modal-panel glass" role="dialog" aria-modal="true" aria-labelledby="m-title">
+    <button class="modal-close round" data-close aria-label="Закрыть">✕</button>
+    <span class="mono" id="m-kind"></span>
+    <h3 id="m-title"></h3>
+    <div class="m-grid">
+      <div><h4>Контекст</h4><p id="m-context"></p></div>
+      <div><h4>Что сделано</h4><p id="m-done"></p></div>
+      <div><h4>Результат</h4><p id="m-result"></p></div>
+      <div><h4>Стек</h4><p id="m-stack"></p></div>
+    </div>
+    <a id="m-link" class="btn btn-light" target="_blank" rel="noopener" hidden>Открыть проект ↗</a>
+  </div>
+</div>
+
+<script src="https://unpkg.com/lenis@1.1.13/dist/lenis.min.js"></script>
+<script src="https://unpkg.com/gsap@3.12.5/dist/gsap.min.js"></script>
+<script src="https://unpkg.com/gsap@3.12.5/dist/ScrollTrigger.min.js"></script>
+<script type="importmap">{ "imports": { "three": "https://unpkg.com/three@0.160.0/build/three.module.js" } }</script>
+<script type="module" src="bg.js"></script>
+<script src="main.js"></script>
+</body>
 </html>
